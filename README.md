@@ -30,7 +30,7 @@ For security reasons, the API key is not included in the repository. After cloni
    cp DocScannerTest/TestAPIKey.template.swift DocScannerTest/TestAPIKey.swift
    ```
 
-2. Edit the `TestAPIKey.swift` file and replace `YOUR_DEEPL_API_KEY_HERE` with your actual DeepL API key.
+2. Edit the `TestAPIKey.swift` file and replace `YOUR_DEEPL_API_KEY_HERE` with your actual DeepL API key. Also, rename the struct from `APIKeysTemplate` to `APIKeys` to match the expected name in the app.
 
 3. Alternatively, you can set environment variables in Xcode:
    - Open the scheme editor (Product > Scheme > Edit Scheme)
@@ -85,6 +85,31 @@ To use the translation features, you need to:
    - Save scans to albums for organization
    - Export documents as PDFs
    - Share documents via standard iOS sharing options
+
+## Troubleshooting
+
+### Document Processing Issues
+
+If you encounter issues with document processing:
+
+1. **Scanner Not Working**: Make sure you've granted camera permissions to the app.
+
+2. **No Text Recognized**: 
+   - Ensure the document is well-lit and clearly visible
+   - Try enabling the "Enhance Document" option for better text recognition
+   - Check that you've selected the correct recognition language
+
+3. **API Key Issues**:
+   - Verify your DeepL API key is correctly set in `TestAPIKey.swift`
+   - Check that the API key format is correct (including any suffixes like ":fx" for free accounts)
+   - Ensure you have internet connectivity for translation features
+
+4. **App Crashes or Freezes**:
+   - Check the console logs for error messages
+   - Restart the app and try again with a simpler document
+   - Make sure you're using the latest version of the app
+
+If problems persist, please report the issue with detailed steps to reproduce and any error messages.
 
 ## Implementation Details
 

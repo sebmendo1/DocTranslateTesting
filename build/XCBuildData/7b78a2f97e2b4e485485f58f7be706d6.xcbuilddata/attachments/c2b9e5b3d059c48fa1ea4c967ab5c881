@@ -85,6 +85,16 @@
     "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.swiftdeps",
     "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey~partial.swiftmodule"
   },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/TestAPIKey.template.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TestAPIKey.template~partial.swiftmodule"
+  },
   "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/TranslationView.swift" : {
     "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TranslationView.swiftconstvalues",
     "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/arm64/TranslationView.d",

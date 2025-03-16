@@ -7,79 +7,63 @@
         "key": "Translation",
         "location": {
           "startingColumn": 22,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "Go back",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "Back",
+        "location": {
+          "startingColumn": 34,
           "startingLine": 23
         }
       },
       {
         "comment": "",
-        "key": "From",
+        "key": "Select language",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 44
+          "startingColumn": 41,
+          "startingLine": 46
         }
       },
       {
         "comment": "",
-        "key": "To",
+        "key": "Set DeepL API key in settings",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 58
+          "startingColumn": 58,
+          "startingLine": 114
         }
       },
       {
         "comment": "",
-        "key": "Change",
+        "key": "Translate text to %@",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 72
+          "startingColumn": 92,
+          "startingLine": 114
         }
       },
       {
         "comment": "",
-        "key": "Original Text",
+        "key": "Set API Key",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 84
-        }
-      },
-      {
-        "comment": "",
-        "key": "Translation error: %@",
-        "location": {
-          "startingColumn": 34,
-          "startingLine": 154
-        }
-      },
-      {
-        "comment": "",
-        "key": "No translation available. Select a language and tap 'Translate'.",
-        "location": {
-          "startingColumn": 34,
-          "startingLine": 161
-        }
-      },
-      {
-        "comment": "",
-        "key": "Translated Text",
-        "location": {
-          "startingColumn": 34,
-          "startingLine": 116
-        }
-      },
-      {
-        "comment": "",
-        "key": "Translating...",
-        "location": {
-          "startingColumn": 46,
-          "startingLine": 147
+          "startingColumn": 52,
+          "startingLine": 103
         }
       },
       {
         "comment": "",
         "key": "Translate",
         "location": {
-          "startingColumn": 30,
-          "startingLine": 189
+          "startingColumn": 68,
+          "startingLine": 103
         }
       },
       {
@@ -87,7 +71,7 @@
         "key": "Select Target Language",
         "location": {
           "startingColumn": 29,
-          "startingLine": 205
+          "startingLine": 122
         }
       },
       {
@@ -95,7 +79,111 @@
         "key": "Choose the language to translate to",
         "location": {
           "startingColumn": 31,
-          "startingLine": 206
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copied to clipboard",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "To use translation features, you need to set up your DeepL API key in Settings.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 169
+        }
+      },
+      {
+        "comment": "",
+        "key": "API Key Required",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "Go to Settings",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "Change target language",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "From",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 194
+        }
+      },
+      {
+        "comment": "",
+        "key": "To",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "Change",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 231
+        }
+      },
+      {
+        "comment": "",
+        "key": "Share %@",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 260
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy %@",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 272
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translating...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 284
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translation Error",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 296
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set API Key in Settings",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 310
         }
       }
     ]

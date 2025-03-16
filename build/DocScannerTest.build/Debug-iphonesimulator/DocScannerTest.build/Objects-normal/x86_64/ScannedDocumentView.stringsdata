@@ -7,31 +7,63 @@
         "key": "Scanned Document",
         "location": {
           "startingColumn": 26,
-          "startingLine": 155
+          "startingLine": 310
         }
       },
       {
         "comment": "",
-        "key": "No document scanned",
+        "key": "Detected language is %@",
         "location": {
-          "startingColumn": 22,
-          "startingLine": 151
+          "startingColumn": 41,
+          "startingLine": 58
         }
       },
       {
         "comment": "",
-        "key": "Processing document...",
+        "key": "Enhanced",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "Scanned document image",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "Detected language: %@",
         "location": {
           "startingColumn": 30,
-          "startingLine": 18
+          "startingLine": 52
         }
       },
       {
         "comment": "",
-        "key": "Translation error: %@",
+        "key": "Text Display",
         "location": {
-          "startingColumn": 38,
-          "startingLine": 58
+          "startingColumn": 32,
+          "startingLine": 65
+        }
+      },
+      {
+        "comment": "",
+        "key": "Original",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translated",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 67
         }
       },
       {
@@ -39,103 +71,231 @@
         "key": "No text was detected in this document.",
         "location": {
           "startingColumn": 38,
-          "startingLine": 71
-        }
-      },
-      {
-        "comment": "",
-        "key": "Detected language: %@",
-        "location": {
-          "startingColumn": 38,
-          "startingLine": 78
-        }
-      },
-      {
-        "comment": "",
-        "key": "Translating...",
-        "location": {
-          "startingColumn": 46,
-          "startingLine": 55
-        }
-      },
-      {
-        "comment": "",
-        "key": "Translated Text",
-        "location": {
-          "startingColumn": 64,
-          "startingLine": 35
+          "startingLine": 93
         }
       },
       {
         "comment": "",
         "key": "Extracted Text",
         "location": {
-          "startingColumn": 84,
-          "startingLine": 35
+          "startingColumn": 56,
+          "startingLine": 76
         }
       },
       {
         "comment": "",
-        "key": "Show Original",
+        "key": "Translated Text",
         "location": {
-          "startingColumn": 72,
-          "startingLine": 46
+          "startingColumn": 75,
+          "startingLine": 76
         }
       },
       {
         "comment": "",
-        "key": "Show Translation",
+        "key": "Copy text",
         "location": {
-          "startingColumn": 90,
-          "startingLine": 46
+          "startingColumn": 49,
+          "startingLine": 88
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translating...",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translation error: %@",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set API Key in Settings",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "Quick Translate",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "API Key Required for Translation",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set Key",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "More...",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 191
+        }
+      },
+      {
+        "comment": "",
+        "key": "Share document",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save to album",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 265
         }
       },
       {
         "comment": "",
         "key": "Share",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 103
+          "startingColumn": 38,
+          "startingLine": 219
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translate document",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 246
         }
       },
       {
         "comment": "",
         "key": "Translate",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 114
+          "startingColumn": 42,
+          "startingLine": 237
+        }
+      },
+      {
+        "comment": "",
+        "key": "Save",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 256
+        }
+      },
+      {
+        "comment": "",
+        "key": "Export as PDF",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 286
+        }
+      },
+      {
+        "comment": "",
+        "key": "Clear document",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 303
+        }
+      },
+      {
+        "comment": "",
+        "key": "PDF",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 277
         }
       },
       {
         "comment": "",
         "key": "Clear",
         "location": {
-          "startingColumn": 34,
-          "startingLine": 127
+          "startingColumn": 38,
+          "startingLine": 294
         }
       },
       {
         "comment": "",
-        "key": "Translate To",
+        "key": "Share",
         "location": {
           "startingColumn": 37,
-          "startingLine": 140
+          "startingLine": 320
         }
       },
       {
         "comment": "",
-        "key": "Select target language",
+        "key": "Select Target Language",
         "location": {
-          "startingColumn": 39,
-          "startingLine": 141
+          "startingColumn": 29,
+          "startingLine": 334
         }
       },
       {
         "comment": "",
-        "key": "Advanced Translation",
+        "key": "Choose the language to translate to",
         "location": {
-          "startingColumn": 38,
-          "startingLine": 204
+          "startingColumn": 31,
+          "startingLine": 335
+        }
+      },
+      {
+        "comment": "",
+        "key": "Set API Key in Settings",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 397
+        }
+      },
+      {
+        "comment": "",
+        "key": "Clear Document",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 341
+        }
+      },
+      {
+        "comment": "",
+        "key": "Are you sure you want to clear this document? This action cannot be undone.",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 342
+        }
+      },
+      {
+        "comment": "",
+        "key": "Clear",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 343
         }
       },
       {
@@ -143,7 +303,7 @@
         "key": "Save to Album",
         "location": {
           "startingColumn": 30,
-          "startingLine": 185
+          "startingLine": 386
         }
       },
       {
@@ -151,31 +311,55 @@
         "key": "Cancel",
         "location": {
           "startingColumn": 50,
-          "startingLine": 186
-        }
-      },
-      {
-        "comment": "",
-        "key": "Album Name",
-        "location": {
-          "startingColumn": 38,
-          "startingLine": 161
-        }
-      },
-      {
-        "comment": "",
-        "key": "Enter album name",
-        "location": {
-          "startingColumn": 31,
-          "startingLine": 162
+          "startingLine": 387
         }
       },
       {
         "comment": "",
         "key": "Save to Album",
         "location": {
+          "startingColumn": 38,
+          "startingLine": 355
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create New Album",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 375
+        }
+      },
+      {
+        "comment": "",
+        "key": "No albums available. Create a new album.",
+        "location": {
           "startingColumn": 30,
-          "startingLine": 181
+          "startingLine": 357
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld images",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 367
+        }
+      },
+      {
+        "comment": "",
+        "key": "Album Name",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 376
+        }
+      },
+      {
+        "comment": "",
+        "key": "Create and Save",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 381
         }
       }
     ]

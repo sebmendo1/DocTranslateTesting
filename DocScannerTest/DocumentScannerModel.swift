@@ -118,8 +118,10 @@ class DocumentScannerModel: ObservableObject {
     
     // Process the scanned document and extract text
     func processScannedDocument(results: VNDocumentCameraScan) {
+        print("processScannedDocument called with \(results.pageCount) pages")
         guard results.pageCount > 0 else {
             self.errorMessage = "No pages scanned"
+            print("No pages scanned")
             return
         }
         
@@ -132,16 +134,19 @@ class DocumentScannerModel: ObservableObject {
         // Store the first image for preview
         let firstPage = results.imageOfPage(at: 0)
         self.scannedImage = firstPage
+        print("First page image set")
         
         // Process all pages
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let self = self else { return }
+            print("Starting background processing of pages")
             
             var allText = ""
             var processedPages = 0
             
             // Process each page
             for pageIndex in 0..<results.pageCount {
+                print("Processing page \(pageIndex + 1) of \(results.pageCount)")
                 let image = results.imageOfPage(at: pageIndex)
                 
                 // Apply enhancement if enabled
@@ -149,12 +154,16 @@ class DocumentScannerModel: ObservableObject {
                 self.scannedImages.append(processedImage)
                 
                 // Recognize text on this page
+                print("Recognizing text on page \(pageIndex + 1)")
                 let pageText = self.recognizeTextSync(in: processedImage)
                 if !pageText.isEmpty {
+                    print("Found text on page \(pageIndex + 1): \(pageText.prefix(50))...")
                     if !allText.isEmpty {
                         allText += "\n\n--- Page \(pageIndex + 1) ---\n\n"
                     }
                     allText += pageText
+                } else {
+                    print("No text found on page \(pageIndex + 1)")
                 }
                 
                 processedPages += 1
@@ -167,17 +176,22 @@ class DocumentScannerModel: ObservableObject {
             
             // Try to detect the language if text was found
             if !allText.isEmpty {
+                print("Detecting language from text")
                 self.detectLanguage(from: allText)
+            } else {
+                print("No text found in document")
             }
             
             // Update UI on main thread
             DispatchQueue.main.async {
+                print("Updating UI with processed document")
                 self.scannedText = allText
                 self.isProcessing = false
                 self.progress = 1.0
                 
                 // Create a new album if we have images
                 if !self.scannedImages.isEmpty {
+                    print("Creating new album with \(self.scannedImages.count) images")
                     let newAlbum = Album(
                         name: "Scan \(DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .short))",
                         images: self.scannedImages,
@@ -228,7 +242,9 @@ class DocumentScannerModel: ObservableObject {
     
     // Synchronous text recognition for use in the processing loop
     private func recognizeTextSync(in image: UIImage) -> String {
+        print("Starting recognizeTextSync")
         guard let cgImage = image.cgImage else {
+            print("Failed to get CGImage from UIImage")
             return ""
         }
         
@@ -239,19 +255,32 @@ class DocumentScannerModel: ObservableObject {
         request.recognitionLanguages = [selectedLanguage.rawValue]
         
         do {
+            print("Performing text recognition request")
             try requestHandler.perform([request])
             
-            guard let observations = request.results as? [VNRecognizedTextObservation] else {
-                return ""
+            // Process the recognized text
+            if let observations = request.results {
+                print("Got \(observations.count) text observations")
+                // Since we know the observations are of type VNRecognizedTextObservation,
+                // we can directly map them without casting
+                #if swift(>=5.0)
+                // Suppress the warning about unnecessary casting
+                #endif
+                let recognizedText = observations.compactMap { observation in
+                    // Direct access to the property
+                    let textObservation = observation
+                    return textObservation.topCandidates(1).first?.string
+                }.joined(separator: "\n")
+                
+                print("Recognized text length: \(recognizedText.count)")
+                return recognizedText
+            } else {
+                print("No text recognition results")
             }
             
-            // Process the recognized text
-            let recognizedText = observations.compactMap { observation in
-                observation.topCandidates(1).first?.string
-            }.joined(separator: "\n")
-            
-            return recognizedText
+            return ""
         } catch {
+            print("Text recognition error: \(error.localizedDescription)")
             DispatchQueue.main.async {
                 self.errorMessage = "Failed to perform text recognition: \(error.localizedDescription)"
             }
@@ -675,26 +704,56 @@ class DocumentScannerModel: ObservableObject {
     }
     
     // Create a PDF from scanned images
-    func createPDF() -> Data? {
-        guard !scannedImages.isEmpty else { return nil }
-        
+    func createPDF(from images: [UIImage], includeText: Bool = false) -> Data {
         let pdfDocument = PDFDocument()
         
-        for (index, image) in scannedImages.enumerated() {
+        for (index, image) in images.enumerated() {
             guard let pdfPage = PDFPage(image: image) else { continue }
             pdfDocument.insert(pdfPage, at: index)
+            
+            // Add text annotation if requested and text is available
+            if includeText && !scannedText.isEmpty && index == 0 {
+                let annotation = PDFAnnotation(bounds: pdfPage.bounds(for: .mediaBox), forType: .text, withProperties: nil)
+                annotation.contents = scannedText
+                annotation.color = .clear // Make it invisible but searchable
+                pdfPage.addAnnotation(annotation)
+            }
         }
         
-        return pdfDocument.dataRepresentation()
+        return pdfDocument.dataRepresentation() ?? Data()
+    }
+    
+    // Create a PDF from all scanned images
+    func createPDF() -> Data? {
+        guard !scannedImages.isEmpty else { return nil }
+        return createPDF(from: scannedImages, includeText: true)
     }
     
     // Create a new album
-    func createAlbum(name: String) {
-        guard !scannedImages.isEmpty else { return }
-        
-        let newAlbum = Album(name: name, images: scannedImages, date: Date())
+    func createAlbum(name: String) -> Album {
+        let newAlbum = Album(name: name, images: [], date: Date())
         albums.append(newAlbum)
-        currentAlbum = newAlbum
+        return newAlbum
+    }
+    
+    // Add image to album
+    func addImageToAlbum(_ image: UIImage, albumId: UUID) {
+        if let index = albums.firstIndex(where: { $0.id == albumId }) {
+            var album = albums[index]
+            album.images.append(image)
+            albums[index] = album
+        }
+    }
+    
+    // Remove image from album
+    func removeImageFromAlbum(at index: Int, albumId: UUID) {
+        if let albumIndex = albums.firstIndex(where: { $0.id == albumId }) {
+            var album = albums[albumIndex]
+            if index < album.images.count {
+                album.images.remove(at: index)
+                albums[albumIndex] = album
+            }
+        }
     }
     
     // Toggle image enhancement

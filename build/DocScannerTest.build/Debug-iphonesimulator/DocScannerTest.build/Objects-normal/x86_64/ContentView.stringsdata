@@ -4,10 +4,10 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Scanner Error",
+        "key": "Document Scanner",
         "location": {
-          "startingColumn": 16,
-          "startingLine": 50
+          "startingColumn": 34,
+          "startingLine": 29
         }
       },
       {
@@ -15,15 +15,15 @@
         "key": "Scanner",
         "location": {
           "startingColumn": 23,
-          "startingLine": 27
+          "startingLine": 33
         }
       },
       {
         "comment": "",
         "key": "Albums",
         "location": {
-          "startingColumn": 23,
-          "startingLine": 36
+          "startingColumn": 27,
+          "startingLine": 41
         }
       },
       {
@@ -31,103 +31,119 @@
         "key": "Settings",
         "location": {
           "startingColumn": 27,
-          "startingLine": 43
+          "startingLine": 49
         }
       },
       {
         "comment": "",
-        "key": "OK",
+        "key": "Camera Access Required",
         "location": {
-          "startingColumn": 20,
-          "startingLine": 51
+          "startingColumn": 29,
+          "startingLine": 85
         }
       },
       {
         "comment": "",
-        "key": "An unknown error occurred",
+        "key": "Please allow camera access in Settings to scan documents.",
         "location": {
-          "startingColumn": 22,
-          "startingLine": 56
+          "startingColumn": 31,
+          "startingLine": 86
         }
       },
       {
         "comment": "",
-        "key": "Document Scanner",
+        "key": "Settings",
         "location": {
-          "startingColumn": 22,
-          "startingLine": 81
+          "startingColumn": 46,
+          "startingLine": 87
         }
       },
       {
         "comment": "",
-        "key": "Translating",
+        "key": "Recognition Language",
         "location": {
-          "startingColumn": 30,
-          "startingLine": 90
-        }
-      },
-      {
-        "comment": "",
-        "key": "Please wait while we process your document",
-        "location": {
-          "startingColumn": 26,
-          "startingLine": 110
-        }
-      },
-      {
-        "comment": "",
-        "key": "Processing document...",
-        "location": {
-          "startingColumn": 34,
-          "startingLine": 106
-        }
-      },
-      {
-        "comment": "",
-        "key": "No Document Scanned",
-        "location": {
-          "startingColumn": 26,
-          "startingLine": 126
-        }
-      },
-      {
-        "comment": "",
-        "key": "Tap the scan button to scan a document",
-        "location": {
-          "startingColumn": 26,
-          "startingLine": 130
+          "startingColumn": 28,
+          "startingLine": 111
         }
       },
       {
         "comment": "",
         "key": "Enhance Document",
         "location": {
-          "startingColumn": 31,
-          "startingLine": 139
-        }
-      },
-      {
-        "comment": "",
-        "key": "Recognition Language:",
-        "location": {
-          "startingColumn": 30,
-          "startingLine": 148
-        }
-      },
-      {
-        "comment": "",
-        "key": "Language",
-        "location": {
-          "startingColumn": 32,
-          "startingLine": 152
+          "startingColumn": 35,
+          "startingLine": 104
         }
       },
       {
         "comment": "",
         "key": "Scan Document",
         "location": {
-          "startingColumn": 31,
-          "startingLine": 178
+          "startingColumn": 34,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "Share",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 163
+        }
+      },
+      {
+        "comment": "",
+        "key": "PDF",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 180
+        }
+      },
+      {
+        "comment": "",
+        "key": "Clear",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "Processing document...",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 243
+        }
+      },
+      {
+        "comment": "",
+        "key": "Please wait while we extract text from your document.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 246
+        }
+      },
+      {
+        "comment": "",
+        "key": "Text extracted",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 273
+        }
+      },
+      {
+        "comment": "",
+        "key": "No Document Scanned",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 299
+        }
+      },
+      {
+        "comment": "",
+        "key": "Tap the Scan button to capture a document and extract text.",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 303
         }
       }
     ]

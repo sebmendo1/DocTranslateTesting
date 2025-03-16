@@ -6,173 +6,78 @@ struct TranslationView: View {
     @State private var showingLanguageSelector = false
     @State private var showingShareSheet = false
     @State private var textToShare: String = ""
+    @State private var showingCopyConfirmation = false
+    @State private var showingSettings = false
+    @AppStorage("deepLApiKey") private var deepLApiKey = ""
     
     var body: some View {
         VStack(spacing: 0) {
             // Header
-            HStack {
-                Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "chevron.left")
-                        .font(.title3)
+            ZStack {
+                HStack {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        HStack(spacing: 4) {
+                            Image(systemName: "chevron.left")
+                            Text("Back")
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    .accessibilityLabel("Go back")
+                    
+                    Spacer()
                 }
-                
-                Spacer()
                 
                 Text("Translation")
                     .font(.headline)
+                    .accessibilityAddTraits(.isHeader)
                 
-                Spacer()
-                
-                Button(action: {
-                    showingLanguageSelector = true
-                }) {
-                    Image(systemName: "globe")
-                        .font(.title3)
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        showingLanguageSelector = true
+                    }) {
+                        Image(systemName: "globe")
+                            .font(.system(size: 18))
+                            .foregroundColor(.blue)
+                    }
+                    .accessibilityLabel("Select language")
                 }
             }
             .padding()
             .background(Color(.systemBackground))
+            .shadow(color: Color.black.opacity(0.05), radius: 1, x: 0, y: 1)
             
             // Content
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    // Language information
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("From")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            
-                            Text(scannerModel.detectedLanguage ?? "Auto-detected")
-                                .font(.subheadline)
-                                .fontWeight(.medium)
-                        }
-                        
-                        Image(systemName: "arrow.right")
-                            .foregroundColor(.secondary)
-                            .padding(.horizontal)
-                        
-                        VStack(alignment: .leading) {
-                            Text("To")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            
-                            Text(scannerModel.targetLanguage.displayName)
-                                .font(.subheadline)
-                                .fontWeight(.medium)
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            showingLanguageSelector = true
-                        }) {
-                            Text("Change")
-                                .font(.subheadline)
-                                .foregroundColor(.blue)
-                        }
+                    // API Key Warning if needed
+                    if deepLApiKey.isEmpty {
+                        apiKeyWarningView
                     }
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(10)
+                    
+                    // Language information
+                    languageSelectionBar
                     
                     // Original text
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack {
-                            Text("Original Text")
-                                .font(.headline)
-                            
-                            Spacer()
-                            
-                            Button(action: {
-                                textToShare = scannerModel.scannedText
-                                showingShareSheet = true
-                            }) {
-                                Image(systemName: "square.and.arrow.up")
-                                    .font(.subheadline)
-                            }
-                            
-                            Button(action: {
-                                UIPasteboard.general.string = scannerModel.scannedText
-                            }) {
-                                Image(systemName: "doc.on.doc")
-                                    .font(.subheadline)
-                            }
-                        }
-                        
-                        Text(scannerModel.scannedText)
-                            .padding()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(Color(.systemGray6))
-                            .cornerRadius(8)
-                            .textSelection(.enabled)
-                    }
+                    textSection(
+                        title: "Original Text",
+                        text: scannerModel.scannedText,
+                        isProcessing: false,
+                        error: nil,
+                        emptyMessage: "No text available."
+                    )
                     
                     // Translated text
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack {
-                            Text("Translated Text")
-                                .font(.headline)
-                            
-                            Spacer()
-                            
-                            if scannerModel.isTranslating {
-                                ProgressView()
-                                    .scaleEffect(0.7)
-                            } else {
-                                Button(action: {
-                                    textToShare = scannerModel.translatedText
-                                    showingShareSheet = true
-                                }) {
-                                    Image(systemName: "square.and.arrow.up")
-                                        .font(.subheadline)
-                                }
-                                .disabled(scannerModel.translatedText.isEmpty)
-                                
-                                Button(action: {
-                                    UIPasteboard.general.string = scannerModel.translatedText
-                                }) {
-                                    Image(systemName: "doc.on.doc")
-                                        .font(.subheadline)
-                                }
-                                .disabled(scannerModel.translatedText.isEmpty)
-                            }
-                        }
-                        
-                        if scannerModel.isTranslating {
-                            HStack {
-                                Spacer()
-                                ProgressView("Translating...")
-                                Spacer()
-                            }
-                            .padding()
-                            .background(Color(.systemGray6))
-                            .cornerRadius(8)
-                        } else if let error = scannerModel.translationError {
-                            Text("Translation error: \(error)")
-                                .foregroundColor(.red)
-                                .padding()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
-                        } else if scannerModel.translatedText.isEmpty {
-                            Text("No translation available. Select a language and tap 'Translate'.")
-                                .foregroundColor(.secondary)
-                                .padding()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
-                        } else {
-                            Text(scannerModel.translatedText)
-                                .padding()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
-                                .textSelection(.enabled)
-                        }
-                    }
+                    textSection(
+                        title: "Translated Text",
+                        text: scannerModel.translatedText,
+                        isProcessing: scannerModel.isTranslating,
+                        error: scannerModel.translationError,
+                        emptyMessage: "No translation available. Select a language and tap 'Translate'."
+                    )
                 }
                 .padding()
             }
@@ -180,24 +85,36 @@ struct TranslationView: View {
             // Bottom action button
             VStack {
                 Button(action: {
-                    scannerModel.translateText()
-                }) {
-                    if scannerModel.isTranslating {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    if deepLApiKey.isEmpty {
+                        showingSettings = true
                     } else {
-                        Text("Translate")
+                        scannerModel.translateText()
+                    }
+                }) {
+                    HStack {
+                        if scannerModel.isTranslating {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                .scaleEffect(0.8)
+                        } else {
+                            Image(systemName: deepLApiKey.isEmpty ? "key" : "globe")
+                                .font(.headline)
+                        }
+                        Text(deepLApiKey.isEmpty ? "Set API Key" : "Translate")
                             .fontWeight(.semibold)
                     }
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(scannerModel.isTranslating || scannerModel.scannedText.isEmpty ? Color.blue.opacity(0.7) : Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
                 }
-                .frame(maxWidth: .infinity)
+                .disabled(scannerModel.isTranslating || (scannerModel.scannedText.isEmpty && !deepLApiKey.isEmpty))
                 .padding()
-                .background(scannerModel.isTranslating ? Color.blue.opacity(0.7) : Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                .disabled(scannerModel.isTranslating || scannerModel.scannedText.isEmpty)
-                .padding()
+                .accessibilityHint(deepLApiKey.isEmpty ? "Set DeepL API key in settings" : "Translate text to \(scannerModel.targetLanguage.displayName)")
             }
+            .background(Color(.systemBackground))
+            .shadow(color: Color.black.opacity(0.05), radius: 3, x: 0, y: -2)
         }
         .navigationBarHidden(true)
         .actionSheet(isPresented: $showingLanguageSelector) {
@@ -210,6 +127,216 @@ struct TranslationView: View {
         .sheet(isPresented: $showingShareSheet) {
             ShareSheet(items: [textToShare])
         }
+        .overlay(
+            showingCopyConfirmation ?
+                VStack {
+                    Spacer()
+                    Text("Copied to clipboard")
+                        .padding()
+                        .background(Color.black.opacity(0.7))
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                        .padding(.bottom, 100)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                }
+                .animation(.easeInOut, value: showingCopyConfirmation)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        withAnimation {
+                            showingCopyConfirmation = false
+                        }
+                    }
+                }
+                : nil
+        )
+        .background(
+            NavigationLink(destination: SettingsView(scannerModel: scannerModel), isActive: $showingSettings) {
+                EmptyView()
+            }
+        )
+    }
+    
+    private var apiKeyWarningView: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Image(systemName: "exclamationmark.triangle")
+                    .foregroundColor(.orange)
+                Text("API Key Required")
+                    .font(.headline)
+                    .foregroundColor(.orange)
+            }
+            
+            Text("To use translation features, you need to set up your DeepL API key in Settings.")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+            
+            Button(action: {
+                showingSettings = true
+            }) {
+                Text("Go to Settings")
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(Color.blue)
+                    .cornerRadius(8)
+            }
+            .padding(.top, 4)
+        }
+        .padding()
+        .background(Color.orange.opacity(0.1))
+        .cornerRadius(12)
+    }
+    
+    private var languageSelectionBar: some View {
+        HStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("From")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
+                HStack {
+                    Text(scannerModel.detectedLanguage ?? "Auto-detected")
+                        .font(.subheadline)
+                        .fontWeight(.medium)
+                    
+                    if scannerModel.detectedLanguage == nil {
+                        Image(systemName: "questionmark.circle")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Image(systemName: "arrow.right")
+                .foregroundColor(.secondary)
+                .padding(.horizontal, 8)
+                .accessibilityHidden(true)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text("To")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
+                Text(scannerModel.targetLanguage.displayName)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Button(action: {
+                showingLanguageSelector = true
+            }) {
+                Text("Change")
+                    .font(.subheadline)
+                    .foregroundColor(.blue)
+            }
+            .accessibilityHint("Change target language")
+        }
+        .padding()
+        .background(Color(.systemGray6))
+        .cornerRadius(12)
+    }
+    
+    private func textSection(title: String, text: String, isProcessing: Bool, error: String?, emptyMessage: String) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text(title)
+                    .font(.headline)
+                
+                Spacer()
+                
+                if !text.isEmpty {
+                    HStack(spacing: 16) {
+                        Button(action: {
+                            textToShare = text
+                            showingShareSheet = true
+                        }) {
+                            Image(systemName: "square.and.arrow.up")
+                                .font(.system(size: 16))
+                                .foregroundColor(.blue)
+                        }
+                        .accessibilityLabel("Share \(title.lowercased())")
+                        
+                        Button(action: {
+                            UIPasteboard.general.string = text
+                            withAnimation {
+                                showingCopyConfirmation = true
+                            }
+                        }) {
+                            Image(systemName: "doc.on.doc")
+                                .font(.system(size: 16))
+                                .foregroundColor(.blue)
+                        }
+                        .accessibilityLabel("Copy \(title.lowercased())")
+                    }
+                }
+            }
+            
+            Group {
+                if isProcessing {
+                    HStack {
+                        Spacer()
+                        VStack(spacing: 8) {
+                            ProgressView()
+                                .scaleEffect(1.2)
+                            Text("Translating...")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        Spacer()
+                    }
+                    .padding(.vertical, 20)
+                } else if let error = error {
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Image(systemName: "exclamationmark.triangle")
+                                .foregroundColor(.red)
+                            Text("Translation Error")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.red)
+                        }
+                        
+                        Text(error)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        
+                        if error.contains("API key") {
+                            Button(action: {
+                                showingSettings = true
+                            }) {
+                                Text("Set API Key in Settings")
+                                    .font(.subheadline)
+                                    .foregroundColor(.blue)
+                            }
+                            .padding(.top, 4)
+                        }
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.red.opacity(0.1))
+                    .cornerRadius(8)
+                } else if text.isEmpty {
+                    Text(emptyMessage)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                } else {
+                    Text(text)
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .textSelection(.enabled)
+                }
+            }
+            .accessibilityElement(children: .combine)
+        }
     }
     
     // Generate language selection buttons
@@ -218,9 +345,12 @@ struct TranslationView: View {
         
         // Add a button for each supported language
         for language in DocumentScannerModel.TranslationLanguage.allCases {
-            buttons.append(.default(Text(language.displayName)) {
+            let isSelected = scannerModel.targetLanguage == language
+            buttons.append(.default(Text(isSelected ? "\(language.displayName) ✓" : language.displayName)) {
                 scannerModel.targetLanguage = language
-                scannerModel.translateText()
+                if !deepLApiKey.isEmpty {
+                    scannerModel.translateText()
+                }
             })
         }
         

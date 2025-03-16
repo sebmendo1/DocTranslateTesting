@@ -1,9 +1,10 @@
 import Foundation
 
-// This file contains API key handling for the app.
+// This file is a template for API key handling.
+// Copy this file to TestAPIKey.swift and replace the placeholder with your actual API key.
 // In a production app, API keys should be stored securely and not in source code.
 
-public struct APIKeys {
+public struct APIKeysTeXmplate {
     // DeepL API key - read from environment or use placeholder
     public static let deepLAPIKey: String = {
         // For production, use environment variables or secure storage
