@@ -1,0 +1,13 @@
+// Disable automatic Info.plist generation
+GENERATE_INFOPLIST_FILE = NO
+
+// Use our custom Info.plist file
+INFOPLIST_FILE = DocScannerTest/Info.plist
+
+// Disable other Info.plist related settings
+INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO
+INFOPLIST_KEY_UILaunchScreen_Generation = NO
+INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = NO
+
+// Add a setting to disable the build warning
+DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING = YES

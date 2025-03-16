@@ -1,0 +1,104 @@
+{
+  "source": "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/TranslationView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Translation",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 23
+        }
+      },
+      {
+        "comment": "",
+        "key": "From",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "To",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "Change",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "Original Text",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translation error: %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "No translation available. Select a language and tap 'Translate'.",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 161
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translated Text",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translating...",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 147
+        }
+      },
+      {
+        "comment": "",
+        "key": "Translate",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 189
+        }
+      },
+      {
+        "comment": "",
+        "key": "Select Target Language",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "Choose the language to translate to",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 206
+        }
+      }
+    ]
+  },
+  "version": 1
+}

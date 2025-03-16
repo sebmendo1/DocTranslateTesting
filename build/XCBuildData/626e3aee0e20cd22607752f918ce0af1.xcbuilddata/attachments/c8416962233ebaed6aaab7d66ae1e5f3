@@ -1,0 +1,108 @@
+{
+  "" : {
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTest-master.dia",
+    "emit-module-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTest-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTest-master-emit-module.dia",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTest-master.swiftdeps"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/AlbumsView.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/AlbumsView~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/ContentView.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ContentView~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/DocScannerTestApp.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocScannerTestApp~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/DocumentScannerModel.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerModel~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/DocumentScannerView.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/DocumentScannerView~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/ScannedDocumentView.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/ScannedDocumentView~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/SettingsView.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/TestAPIKey.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TestAPIKey~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/TranslationView.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/TranslationView~partial.swiftmodule"
+  },
+  "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/sebastianmendo/Swift-projects/DocScannerTest/build/DocScannerTest.build/Debug-iphonesimulator/DocScannerTest.build/Objects-normal/x86_64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

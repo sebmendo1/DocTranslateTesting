@@ -1,0 +1,25 @@
+// Enable automatic Info.plist generation
+GENERATE_INFOPLIST_FILE = YES
+
+// Set the bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = com.document-translator-v4.DocScannerTest
+
+// App settings
+MARKETING_VERSION = 1.0
+CURRENT_PROJECT_VERSION = 1
+INFOPLIST_KEY_CFBundleDisplayName = DocScanner
+
+// UI settings
+INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES
+INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES
+INFOPLIST_KEY_UILaunchScreen_Generation = YES
+INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+
+// Camera and photo library permissions
+INFOPLIST_KEY_NSCameraUsageDescription = This app needs access to your camera to scan documents.
+INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = This app needs permission to save scanned documents to your photo library.
+INFOPLIST_KEY_NSPhotoLibraryUsageDescription = This app needs access to your photo library to save scanned documents.
+
+// Document types - we'll handle this in code instead of in the xcconfig file
+// INFOPLIST_KEY_CFBundleDocumentTypes is not supported in xcconfig format

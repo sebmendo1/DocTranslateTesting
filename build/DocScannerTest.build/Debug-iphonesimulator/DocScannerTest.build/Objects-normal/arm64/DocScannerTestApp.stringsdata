@@ -1,0 +1,24 @@
+{
+  "source": "/Users/sebastianmendo/Swift-projects/DocScannerTest/DocScannerTest/DocScannerTestApp.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Configuration Error",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "See Instructions",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 51
+        }
+      }
+    ]
+  },
+  "version": 1
+}
