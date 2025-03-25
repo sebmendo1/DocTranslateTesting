@@ -1,0 +1,6 @@
+// Disable automatic launch screen generation
+INFOPLIST_KEY_UILaunchScreen_Generation = NO
+
+// Other settings that may be needed
+INFOPLIST_FILE = DocScannerTest/Info.plist
+GENERATE_INFOPLIST_FILE = NO 
